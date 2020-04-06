@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 class CommunitiesController < ApplicationController
-  before_authentication :authentication_account!, except: %i[index show]
+  before_action :authenticate_account!, except: %i[index show]
 
-  def index; end
+  def index
+    @communities = Community.all
+  end
 
   def show; end
 

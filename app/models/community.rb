@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Community
-  belogs_to :account
-  validate_presence_of :url, :name
+class Community < ApplicationRecord
+  belongs_to :account
+  validates_presence_of :url, :name
 end
