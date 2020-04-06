@@ -21,6 +21,12 @@ gem 'devise'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+# Bootstrap 4 rubygem for Rails
+gem 'bootstrap', '~> 4.4.1'
+# Rack-based asset packaging system
+# gem 'sprockets', '~> 4.0'
+# Bootstrap JavaScript depends on jQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
