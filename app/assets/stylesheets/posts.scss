@@ -1,0 +1,16 @@
+.upvote, .downvote {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+
+  &.active {
+    color: #0000ff;
+  }
+
+  &:hover {
+    color: #0000ff;
+    cursor: pointer;
+  }
+}
