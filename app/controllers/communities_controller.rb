@@ -9,7 +9,9 @@ class CommunitiesController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @community = Community.new
+  end
 
   def create; end
 end
