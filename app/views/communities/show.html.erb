@@ -1,12 +1,17 @@
 <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right"%>
+
 <h2><%= @community.name%></h2>
-  <%= @subscriber_count %>
 
 <div class="row">
   <div class="col-9">
     <%= render partial: "posts/list_posts", locals: {posts: @posts}%>
   </div>
   <div class="col-3">
+    <div class="card p-3">
+      <h3>Summary</h3>
+      <p class="mt-2"><%=  @community.summary  %></p>
+      <p><%= pluralize @subscriber_count, "member" %></p>
+    </div>
     <%= simple_format @community.rules%>
   </div>
 </div>
