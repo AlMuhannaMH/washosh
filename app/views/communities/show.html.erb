@@ -1,3 +1,8 @@
-<p><%= @community.name%><p>
-    <p><%= @community.url%><p>
-        <p><%= @community.rules%><p>
+<%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right"%>
+<%= @community.name%>
+<%= simple_format @community.rules%>
+
+<% @posts.each do |post|%>
+<h3><%= link_to post.title, community_post_path(@community, post)%></h3>
+<p><%= link_to post.body, length: 50 %></p>
+<%end%>
