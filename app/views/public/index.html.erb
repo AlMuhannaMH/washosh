@@ -1,5 +1,4 @@
 <div class="container">
-
 </div><% unless account_signed_in? %>
   <div class="row">
     <div class="col">
@@ -22,8 +21,12 @@
   </div>
 <% end %>
 <div class="row">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="col-12">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</div>
+<div class="row">
   <div class="col">
     <p class="h5">Popular Posts</p>
   </div>
@@ -34,7 +37,6 @@
   </div>
   <div class="col-4">
     <p class="h5 mb-4">Up and coming Communities</p>
-
     <div class="card">
       <ul class="list-group list-group-flush">
         <% @communities.each do |community| %>
@@ -42,7 +44,6 @@
         <% end %>
       </ul>
     </div>
-
     <%= link_to "View all", communities_path, class: "btn btn-primary mt-4" %>
   </div>
 </div>
