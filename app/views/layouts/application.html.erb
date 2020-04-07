@@ -3,23 +3,23 @@
 
 <head>
   <title>Washosh</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
   <%= render partial: "layouts/header"%>
 
   <div class="container">
-  <div class="row">
-    <div class="col-sm-12 pt-4">
-    <%= yield %>
+    <div class="row">
+      <div class="col-sm-12 pt-4">
+        <%= yield %>
+      </div>
     </div>
   </div>
-  <div
-  <%= render partial: "layouts/footer"%>
-</body>
+
+  <%= render partial: "layouts/footer"%> </body>
 
 </html>
