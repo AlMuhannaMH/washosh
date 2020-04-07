@@ -1,14 +1,14 @@
-<div class="row-mb-4">
+<div class="row mb-4">
   <div class="col-sm-8">
-    <h3><%= @community.name%></h3>
+    <h3><%= @community.name %></h3>
   </div>
 
   <div class="col-sm-4">
     <% if @is_subscribed %>
-    <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right" %>
-    <%else%>
-    <render partial: "communities/join">
-      <%end%>
+      <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right" %>
+    <% else %>
+      <%= render partial: "communities/join", locals: { community_id: @community.id } %>
+    <% end %>
   </div>
 </div>
 
@@ -21,12 +21,12 @@
   <div class="col-sm-4">
     <div class="card p-3">
       <p class="h5">Summary</p>
-      <p class="mt-2"><%=  @community.summary  %></p>
-      <p><%= pluralize @subscriber_count, "member" %></p>
+      <p class="mt-2"><%= @community.summary %></p>
+      <p><%= pluralize(@subscriber_count, "member") %></p>
     </div>
 
     <small>
-      <%= simple_format @community.rules%>
+      <%= simple_format @community.rules %>
     </small>
   </div>
 </div>
