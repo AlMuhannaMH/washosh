@@ -31,9 +31,10 @@
       <p class="h5 mb-4">Up and coming Communities</p>
       <div class="card">
         <ul class="list-group list-group-flush">
-          tests
-          <li class="list-group-item">test</li>
+          <% @communities.each do |community|%>
+          <li class="list-group-item"><%= link_to community.name, communities_path(community)%></li>
         </ul>
+        <%end%>
       </div>
       <%= link_to "Show All", communities_path, class: "btn btn-primary mt-3" %>
     </div>
