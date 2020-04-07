@@ -5,4 +5,8 @@ class PublicController < ApplicationController
     @communities = Community.all.limit(3)
     @posts = Post.order(id: :desc).limit(2)
   end
+
+  def profile
+    @profile = Account.find_by_username params[:username]
+  end
 end
