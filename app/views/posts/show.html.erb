@@ -1,9 +1,13 @@
 <p><%= @post.title%><p>
 <%= simple_format @post.body %>
 
-  <h5>Leave a comment</h5>
-  <%= form_for @comment do |f| %>
-    <%= f.hidden_field :post_id, value: @post.id %>
-    <%= f.text_area :message, placeholder: "Add new comment", class: "form-control" %>
-    <%= f.submit "Submit comment", class: "btn btn-success mt-3" %>
-  <% end %>
+<div>
+<%= render partial: "posts/comments", locals: { comments: @post.comments } %>
+</div>
+
+<h5>Leave a comment</h5>
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.text_area :message, placeholder: "Add new comment", class: "form-control" %>
+  <%= f.submit "Submit comment", class: "btn btn-success mt-3" %>
+<% end %>
