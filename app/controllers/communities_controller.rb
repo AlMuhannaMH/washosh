@@ -11,6 +11,7 @@ class CommunitiesController < ApplicationController
   def show
     @posts = @community.posts
     @subscriber_count = @community.subscribers.count
+    @communitie = Subscription.new
   end
 
   def new
@@ -19,7 +20,7 @@ class CommunitiesController < ApplicationController
 
   def create
     @community = Community.new(community_params)
-    @community.account = current_account
+    @community.account = current_account.id
 
     if @community.save
       redirect_to @community
