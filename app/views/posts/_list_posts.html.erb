@@ -1,13 +1,11 @@
 <% @posts.each do |post|%>
 <div class="card p-3">
+	<h3><%= link_to post.title, community_post_path(post.community_id, post)%></h3>
 	<p>
-		<%= link_to post.community.name %>
-		Posted by
-		<%= link_to post.account.full_name, profile_path(post.account.username) %>
+		<%= link_to post.community.name, community_path(post.community_id)%>
+		Posted by <%= link_to post.account.full_name, profile_path(post.account.username) %>
 		<%= time_ago_in_words post.created_at %>
 	</p>
-	<h3><%= link_to post.title, community_post_path(post.community_id, post)%></h3>
-	<p><%= link_to post.body, length: 50 %></p>
+	<p><%= truncate post.body, length: 50 %></p>
 </div>
 <%end%>
-rails generate migration AddUsernameToAccount username:string

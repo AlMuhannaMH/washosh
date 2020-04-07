@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-4">
   <div class="row">
     <div class="col-12 pt-3 pb-3 mb-4 border-bottom">
       <div class="float-right">
@@ -9,7 +9,7 @@
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <%= link_to 'Profile', edit_account_registration_path, method: :delete, class: "dropdown-item"%>
+            <%= link_to 'Profile', profile_path(current_account.username), class: "dropdown-item"%>
             <%= link_to 'Settigns', edit_account_registration_path, class: "dropdown-item"%>
             <%= link_to 'Signout', destroy_account_session_path, method: :delete, class: "dropdown-item"%>
           </div>
