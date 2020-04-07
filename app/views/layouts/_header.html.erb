@@ -3,10 +3,21 @@
     <div class="col-12 pt-3 pb-3 mb-4 border-bottom">
       <div class="float-right">
         <% if account_signed_in? %>
-          <%= link_to 'Signout', destroy_account_session_path, method: :delete, class: "btn btn-primary"%>
+        <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%# <%= current_account.full_name %> %>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <%= link_to 'Profile', edit_account_registration_path, method: :delete, class: "dropdown-item"%>
+            <%= link_to 'Settigns', edit_account_registration_path, class: "dropdown-item"%>
+            <%= link_to 'Signout', destroy_account_session_path, method: :delete, class: "dropdown-item"%>
+          </div>
+        </div>
+
         <% else %>
-          <%= link_to "Login", new_account_session_path, class: "btn btn-outline-primary" %>
-          <%= link_to "Signup", new_account_registration_path, class: "btn btn-primary" %>
+        <%= link_to "Login", new_account_session_path, class: "btn btn-outline-primary" %>
+        <%= link_to "Signup", new_account_registration_path, class: "btn btn-primary" %>
         <% end %>
       </div>
       <p class="h3"><%= link_to "Washosh", root_path %></p>
