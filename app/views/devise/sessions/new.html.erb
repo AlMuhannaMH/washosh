@@ -18,8 +18,10 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
-  <div class="actions d-flex justify-content-center">
+  <div class="text-center">
+    <%= render "devise/shared/links" %>  
+  </div>
+  <div class="actions d-flex justify-content-center pt-4">
     <%= f.submit "Log in", class: "btn btn-primary" %>
   </div>
 <% end %>
