@@ -24,6 +24,8 @@ class CommunitiesController < ApplicationController
     @community.account = current_account
 
     if @community.save
+       @subscription = Subscription.new(community_id: @community.id, account_id: current_account.id)
+       @subscription.save
       redirect_to communities_path
     else
       render 'new'
