@@ -7,7 +7,7 @@
     <% if @is_subscribed %>
       <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right" %>
     <% else %>
-      <%= render partial: "communities/join", locals: { community_id: @community.id } %>
+      <%= render partial: "communities/join", locals: { community_id: @community } %>
     <% end %>
   </div>
 </div>
@@ -19,7 +19,7 @@
     <div class="card p-3">
       <p class="h5">Summary </p>
       <p class="mt-2"><%= @community.summary %></p>
-      
+
     </div>
     <br>
     <div class="card p-3">
