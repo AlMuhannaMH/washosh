@@ -14,24 +14,20 @@
   <!-- Page Content -->
 <div class="container">
   <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-      <div style="height: auto;">
-
+   <div class="card-body p-5">
+    <p class="notice text-center"><%= notice %></p>
+    <p class="alert text-center"><%= alert %></p>  
+    <div style="height: auto;">
     <div class="row">
-      <div class="col-sm-12 pt-4">
-        <%= yield %>
+     <div class="col-sm-12 pt-4">
+      <%= yield %>
       </div>
     </div>
-
-        
       </div>
       <p class="lead pt-xl-5 text-center text-light">Made with love from MHM!</p>
     </div>
   </div>
 </div>
-
-
-
   <%= render partial: "layouts/footer"%> 
 </body>
 
