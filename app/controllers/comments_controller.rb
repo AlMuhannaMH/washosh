@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
           @comments = Comment.where(post_id: @comment.post_id)
           render 'comments/create'
         else
-          # unable to save
+          redirect_to root_path, flash: { danger: 'unable to save' }
         end
       end
     end
