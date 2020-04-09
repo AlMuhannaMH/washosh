@@ -5,26 +5,29 @@
   </div>
   <div class="col-sm-4">
     <% if @is_subscribed %>
-      <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-primary float-right" %>
+      <%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-dark float-right" %>
     <% else %>
       <%= render partial: "communities/join", locals: { community_id: @community } %>
     <% end %>
+
   </div>
 </div>
 <div class="row">
   <div class="col-sm-8">
     <%= render partial: "posts/list", locals: {posts: @posts}%>
   </div>
-  <div class="col-sm-4">
+  <div class="card-body col-sm-4">
     <div class="card p-3">
-      <p class="h5">Summary </p>
-      <p class="mt-2"><%= @community.summary %></p>
-
+      <% if @is_subscribed %>
+        <%= link_to "Edit #{@community.name} Community", community_path(@community), , method: :patch  class: "btn btn-dark float-right"%>
+      <% end %>
     </div>
-    <br>
     <div class="card p-3">
-      <p class="h5">Rules</p>
-      <p class="mt-2"><%= simple_format @community.rules %></p>
+      <p class="card-title h5">Summary </p>
+      <p class="card-text"><%= @community.summary %></p>
+      <br>
+      <p class="card-title h5">Rules</p>
+      <p class="card-text"><%= simple_format @community.rules %></p>
     </div>
   </div>
 </div>
