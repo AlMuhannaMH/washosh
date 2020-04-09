@@ -70,7 +70,7 @@ WASHOSH gives opinions and experiences based on subscriptions to the content of 
 
 ## Configuration
 
-### - Create new file .env in your project root dirkter with blow information to configer your postgresql db in database.yml
+### - Create new file .env in your project root directory with below information to configure your PostgreSQL DB in database.yml
 
 ```text
 - DATABASE_USERNAME=YOUR_DATABASE_USERNAME_HERE
@@ -80,19 +80,19 @@ WASHOSH gives opinions and experiences based on subscriptions to the content of 
 
 ## Database creation
 
-### - Run the following comand to create the db in your pg server
+### - Run the following command to create the DB in your pg server
 
 - ```rails db:reset``` wish does runs db:drop, db:setup
 
 ## Database initialization
 
-### - Run the following comand to migrate the db
+### - Run the following command to migrate the DB
 
 - ```rails db:migrate``` wich does runs migrations for the current env that have not run yet
 
 ## Deployment instructions
 
-- Please rever to **[Deployment on Rails 5](https://devcenter.heroku.com/articles/getting-started-with-rails5)** in heroku website to see the nessety instructions step in order to deploy the application
+- Please refer to **[Deployment on Rails 5](https://devcenter.heroku.com/articles/getting-started-with-rails5)** in Heroku website to see the necessity instructions step in order to deploy the application
 
 ---
 
