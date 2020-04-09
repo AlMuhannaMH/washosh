@@ -1,11 +1,12 @@
-# WASHOSH
+---
+---
+
+<p align="center">
+<img alt="WASHOSH ICON" src="https://raw.githubusercontent.com/AlMuhannaMH/washosh/master/app/assets/images/icon.png">
+</p>
 
 WASHOSH is an aggregation platform, it is designed to open the communication of society in which everyone can participate, without hesitation through and creating communities and everyone can post as well as comment on topics such as news, sport as well as art and entertainment, etc.  
 WASHOSH gives opinions and experiences based on subscriptions to the content of the communities. It makes it easier for you to find the best place for you to enjoy.
-
-<p align="center">
-<img alt="UI1" src="">
-</p>
 
 ---
 
@@ -48,7 +49,7 @@ WASHOSH gives opinions and experiences based on subscriptions to the content of 
 - votes (In progress)
 
 <p align="center">
-<img alt="UI1" src="">
+<img alt="WASHOSH ERD" src="https://raw.githubusercontent.com/AlMuhannaMH/washosh/master/app/assets/images/ERD-Highlight.png">
 </p>
 
 ---
