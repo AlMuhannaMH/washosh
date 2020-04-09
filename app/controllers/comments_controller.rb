@@ -3,7 +3,7 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new comment_params
-    @comment.account_id = current_account
+    @comment.account_id = current_account.id
 
     respond_to do |format|
       format.js do
