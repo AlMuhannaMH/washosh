@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-  before_action :authenticate_account!, except: %i[index show]
-  before_action :set_post, only: [:show]
-  before_action :auth_subscriber, only: [:new]
+  before_action :authenticate_account!, except: %i[index show edit destroy]
+  before_action :set_post, only: [:show, :edit, :destroy]
+  before_action :auth_subscriber, only: [:new, :edit, :destroy]
 
   def index
     @posts = Post.all
@@ -29,6 +29,23 @@ class PostsController < ApplicationController
       @community = Community.find(params[:community_id])
       render 'new'
     end
+  end
+
+  def edit
+    @post
+  end
+
+  def update
+    @post = set_post
+    if @post.update(post_params)
+      redirect_to community_posts_path(@post)
+        else
+      render 'edit'
+    end
+  end
+
+  def destroy
+      @post.destroy
   end
 
   private

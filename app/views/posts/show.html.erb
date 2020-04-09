@@ -8,6 +8,10 @@
       </div>
   <div class="col-11">
     <% unless @post.account.blank? then %>
+    <%  if false %>
+    <%= link_to 'Edit Post', edit_community_post_path, class: "btn  btn-outline-dark btn-sm"%>
+    <%= link_to 'Delete Post', community_post_path, method: :delete, class: "btn btn-danger btn-sm" %>
+    <% end %>
       <p><%= link_to @post.community.name, community_path(@post.community) %> • Posted by u/<%= link_to @post.account.username, profile_path(@post.account.username) %></p>
       <% else %>
       <p><%= link_to @post.community.name, community_path(@post.community) %> • Posted by u/[deleted]</p>
