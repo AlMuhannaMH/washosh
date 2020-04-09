@@ -82,13 +82,13 @@ WASHOSH gives opinions and experiences based on subscriptions to the content of 
 
 ### - Run the following command to create the DB in your pg server
 
-- ```rails db:reset``` wish does runs db:drop, db:setup
+- ```rails db:reset``` which does runs db:drop, db:setup
 
 ## Database initialization
 
 ### - Run the following command to migrate the DB
 
-- ```rails db:migrate``` wich does runs migrations for the current env that have not run yet
+- ```rails db:migrate``` which does runs migrations for the current env that have not run yet
 
 ## Deployment instructions
 
